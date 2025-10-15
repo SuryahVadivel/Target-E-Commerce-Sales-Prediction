@@ -1,82 +1,98 @@
-# Target-E-Commerce-Sales-Prediction
-End-to-end analytics project forecasting e-commerce sales for Target using Python, statistical modeling, and business intelligence storytelling.
-
-# Analysis of Target’s E-Commerce Sales Data  
-**Data Science & Programming Project**  
-📍 *McCombs School of Business – The University of Texas at Austin*  
+# Target E-Commerce Sales Prediction
+Data Science and Business Analytics Project  
+McCombs School of Business, The University of Texas at Austin
 
 ---
 
 ## Project Overview
-An end-to-end data science project focused on **sales forecasting and business insight generation** for Target’s e-commerce operations.  
-The objective was to analyze historical online sales, identify performance trends, and build a predictive model to forecast future demand across product categories.
+This project analyzes and forecasts daily e-commerce sales for Target’s operations in Brazil between 2016 and 2018.  
+The goal was to develop a reproducible forecasting model and generate business insights that could support operational planning, regional stocking, and marketing strategies.  
+
+The analysis covers order activity, customer behavior, payment methods, logistics performance, and geographic patterns, integrating multiple data sources into a unified analytical framework.
 
 ---
 
-##  Business Problem Statement
-Target’s e-commerce platform required a system to **accurately forecast future demand**, reduce stockouts, and optimize promotional campaigns.  
-Current forecasting models under- or over-estimated sales in key categories, impacting logistics and marketing spend.
+## Dataset Description
+The dataset contains about 100,000 orders and is divided across eight relational tables: customers, sellers, order items, geolocation, payments, orders, and products.  
+Each record includes detailed information on order status, pricing, payment method, shipping performance, customer location, product attributes, and reviews.
 
-**Goal:**  
-Build a predictive model combining time-series sales data, promotional events, and category performance to improve **forecast accuracy and strategic decision-making**.
-
----
-
-##  Dataset Overview
-- **Source:** Target’s internal transaction data (2016-2019)  
-- **Size:** ~2.8M records  
-- **Key Fields:** Date, Product Category, Quantity, Revenue, Region, Discounts  
-- **Duration:** Jan 2016 – Oct 2019  
+**Primary business questions**
+1. Can daily sales be forecast accurately?  
+2. Can the forecasts improve operational planning?  
+3. Can a scalable, reproducible model be developed for broader business use?
 
 ---
 
-##  Business Value & Importance
-- Identifies **seasonality and demand fluctuations** to support procurement planning.  
-- Enables **budget forecasting and supply-chain scheduling**.  
-- Quantifies the impact of promotions and discounts on total sales.  
-- Provides **data-driven insights** to improve campaign ROI and reduce unsold inventory.
+## Importance of the Problem
+E-commerce companies rely heavily on accurate forecasting and segmentation to maintain profitability and customer satisfaction.  
+The insights from this project can be applied to:
+- Improve demand planning and inventory allocation by region  
+- Guide digital marketing and promotional timing  
+- Increase profitability through customer segmentation and retention analytics  
+- Create scalable modeling workflows adaptable to larger datasets and new sources  
 
 ---
 
-## Methodology
-1. **Exploratory Data Analysis (EDA)** – Outlier detection, trend identification.  
-2. **Feature Engineering** – Lag variables, holiday & promotion encoding.  
-3. **Modeling** – Linear Regression, Random Forest, ARIMA, and Prophet.  
-4. **Evaluation** – RMSE and MAPE comparison across models.  
-5. **Visualization** – Interactive dashboards for business insights.
+## Exploratory Data Analysis
+The exploratory phase focused on cleaning, merging, and visualizing multiple data sources.
+
+**Key steps**
+- **Relevance filtering:** kept only variables aligned with forecasting objectives  
+- **Data merging:** combined eight feature tables into one analytical dataset  
+- **Geographic mapping:** visualized orders, calculated distances, and identified regional buying patterns  
+- **Standardization:** corrected column names, fixed date formats, handled missing values  
+
+**Notable findings**
+- Clear seasonal peaks in November sales, driven by holiday campaigns  
+- Rolling 7-day averages revealed short-term demand momentum  
+- Daily sales statistics: mean ≈ $20.7 K  |  median ≈ $20.5 K  |  maximum ≈ $179.2 K  
 
 ---
 
-##  Preview
-🔗 [View Full Report (PDF)](Daily_sales_forecasting.pdf)
+## Modeling and Evaluation
+Four models were tested: Naïve, Seasonal Naïve, Linear Regression, and Gradient Boosting.  
+Model performance was evaluated using MAE, RMSE, sMAPE, and WAPE.  
+
+**Best-performing model:** Linear Regression  
+- MAE = $6,102  
+- RMSE = $7,265  
+
+Despite its simplicity, the linear model achieved the strongest accuracy and generalization.  
+This indicates that a small set of well-chosen time and category features captured most of the sales variation in the dataset.
 
 ---
 
-## Key Outcomes
-- Improved forecast accuracy by **27%** over baseline models.  
-- Identified peak seasonal windows for key categories.  
-- Recommended optimized inventory allocation across fulfillment centers.  
-- Delivered actionable intelligence enabling smarter promotional planning.
+## Insights and Business Implications
+- **Seasonality:** pronounced November sales peaks suggest strong responsiveness to promotions and holidays.  
+- **Regional trends:** geographic differences point to the need for region-specific stocking and marketing approaches.  
+- **Customer segmentation:** RFM analysis (Recency, Frequency, Monetary) identified customer clusters for retention and upsell targeting.  
+- **Forecasting utility:** daily predictions from the linear model can guide short-term inventory and logistics planning.  
+- **Scalability:** the framework can be extended to include additional signals such as product reviews, browsing data, or campaign metadata.  
+
+Integrating these models into operational dashboards (Excel or Power BI) enables cross-departmental access and faster decision-making.
 
 ---
 
-## Tools & Technologies
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=python&logoColor=white)
-![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=power-bi&logoColor=black)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+## Technologies Used
+Python (NumPy, Pandas, Matplotlib, Scikit-learn), Power BI, Jupyter Notebook
 
 ---
 
-## 📈 Repository Structure
-| Folder | Description |
-|---------|--------------|
-| `notebooks/` | Jupyter notebook for model development and forecasting. |
-| `reports/` | Presentation and analysis report in PDF format. |
+## Repository Files
+| File | Description |
+|------|--------------|
+| `Daily_sales_forecasting.pdf` | Full written report including methodology, metrics, and recommendations |
+| `Sales_forecasting_ppt.pdf` | Executive presentation summarizing findings |
+| `Sales_Prediction_with_o_p.ipynb` | Jupyter notebook with preprocessing, EDA, and modeling code |
 
 ---
 
+## Conclusion
+The project demonstrates that a transparent, interpretable model such as linear regression can deliver highly reliable daily sales forecasts for an e-commerce platform.  
+Beyond forecasting accuracy, the analysis highlights actionable insights into regional buying patterns, customer behavior, and campaign timing—each directly applicable to business planning and profitability improvement.
 
+---
 
+## Contact
+For further discussion or access to supplementary materials, please reach out via  
+[LinkedIn – Suryah Vadivel](https://www.linkedin.com/in/suryahvadivel)
