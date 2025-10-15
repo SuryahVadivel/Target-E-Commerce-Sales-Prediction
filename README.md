@@ -2,6 +2,8 @@
 Data Science and Business Analytics Project  
 McCombs School of Business, The University of Texas at Austin
 
+![Target E-Commerce Sales Analysis](Sales_forecasting.png)
+
 ---
 
 ## Project Overview
