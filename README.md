@@ -76,20 +76,20 @@ Integrating these models into operational dashboards (Excel or Power BI) enables
 ## Technologies Used
 Python (NumPy, Pandas, Matplotlib, Scikit-learn), Power BI, Jupyter Notebook
 
----
 
-## Repository Files
+
 | File | Description |
 |------|--------------|
-| `Daily_sales_forecasting.pdf` | Full written report including methodology, metrics, and recommendations |
-| `Sales_forecasting_ppt.pdf` | Executive presentation summarizing findings |
-| `Sales_Prediction_with_o_p.ipynb` | Jupyter notebook with preprocessing, EDA, and modeling code |
+| [Daily_sales_forecasting.pdf](Daily_sales_forecasting.pdf) | Full written report including methodology, metrics, and recommendations |
+| [Sales_forecasting_ppt.pdf](Sales_forecasting_ppt.pdf) | Executive presentation summarizing findings |
+| [Sales_Prediction_with_o_p.ipynb](Sales_Prediction_with_o_p.ipynb) | Jupyter notebook with preprocessing, EDA, and modeling code |
+
 
 ---
 
 ## Conclusion
 The project demonstrates that a transparent, interpretable model such as linear regression can deliver highly reliable daily sales forecasts for an e-commerce platform.  
-Beyond forecasting accuracy, the analysis highlights actionable insights into regional buying patterns, customer behavior, and campaign timing—each directly applicable to business planning and profitability improvement.
+Beyond forecasting accuracy, the analysis highlights actionable insights into regional buying patterns, customer behavior, and campaign timing each directly applicable to business planning and profitability improvement.
 
 ---
 
